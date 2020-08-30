@@ -27,5 +27,5 @@ class TestResource(Resource):
                 raise ResourceNotFoundException(test_id)
             test = TestingModelSchema().dump(test)
         except ResourceNotFoundException as error:
-            return error.message, 404
+            return error.messages, 404
         return test, 200
