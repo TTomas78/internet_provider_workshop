@@ -5,10 +5,10 @@ from app.main.models import TestingModel
 from app.main.schemas import TestingModelSchema
 from app.main.schemas import ContainTestingModelSchema
 from app.main.exceptions import ResourceNotFoundException
-api = Namespace('test', description='test related operations')
+api = Namespace('Tests', description='test related operations', path='/')
 
 
-@api.route('tests')
+@api.route('/tests')
 class TestResourceList(Resource):
     @api.doc('get_all_tests')
     def get(self):
@@ -16,7 +16,7 @@ class TestResourceList(Resource):
         return True, 200
 
 
-@api.route('tests/<int:test_id>')
+@api.route('/tests/<int:test_id>')
 class TestResource(Resource):
     @api.doc('get_test_by_id')
     def get(self, test_id):
