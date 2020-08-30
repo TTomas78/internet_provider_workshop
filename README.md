@@ -3,10 +3,50 @@ Taller de python
 
 # Pasos para la instalacion:
 
-1 - Crear el entorno virtual (virtualenv) en la carpeta del repo
-2 - Entrar en el entorno virtual
-3 - instalar los requerimientos (pip install -r requirements.txt)
-4 - levantar la base de datos
-5 - correr la aplicacion
+1 - install virtualenv
 
-Si tienen algun problema con los requerimientos, probablemente les falte instalar el cliente mysql para python.
+  sudo apt install virtualenv
+  
+2 - create the virtual environment
+
+  virtualenv venv
+  
+  or specify the python version you want
+  
+  virtualenv venv -p /usr/bin/python3.7
+  
+3 - open the virtual environment
+
+  source venv/bin/activate
+
+4 - install mysql client for python
+
+  sudo apt-get install libmysqlclient-dev
+  
+5 - install the requirements
+
+  pip install -r requirements.txt
+  
+  
+6 - install docker following the instuctions
+
+  https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
+
+7 - install docker compose
+
+  sudo apt install docker-compose
+  
+8 - restart your computer
+
+9 - raise the docker containers
+
+  docker-compose up -d
+  
+10 - run the application
+
+  ./run.local
+  
+11 - open the documentation page in your browser
+
+  localhost:5000/docs
+
