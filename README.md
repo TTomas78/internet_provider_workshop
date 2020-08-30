@@ -48,10 +48,6 @@ Taller de python
   
   stop the server (that step it's because you need to set the enviroments variables into your terminal session)
   
-  flask db init (maybe it could not be necessary)
-  
-  flask db migrate
-  
   flask db upgrade
   
 10 - run the application
