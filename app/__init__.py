@@ -1,6 +1,6 @@
 from flask_restplus import Api
 from flask import Blueprint
-from app.main.controllers import test_ns
+from app.main.controllers import *
 
 blueprint = Blueprint('api', __name__)
 
@@ -11,3 +11,4 @@ api = Api(blueprint,
           doc='/docs')
 
 api.add_namespace(test_ns)
+api.add_namespace(client_ns)

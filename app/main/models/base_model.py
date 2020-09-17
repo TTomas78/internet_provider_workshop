@@ -11,7 +11,7 @@ class CommonIsDeletedModel(db.Model):
     is_deleted = db.Column(db.Boolean(),
                            nullable=False,
                            default=False,
-                           server_default='0')
+                           server_default='1')
 
 
 class BaseModel(CommonIsDeletedModel):
