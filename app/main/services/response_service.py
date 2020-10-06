@@ -21,7 +21,7 @@ class ResponseService():
         self._messages = []
         self._success = False
 
-    def response(self, data):
+    def response(self, data=None):
         self._data = data
         if self._messages:
             self._success = False
